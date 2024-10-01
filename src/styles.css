@@ -1,0 +1,78 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  color: white;
+}
+body {
+  background-image: url(https://www.models-resource.com/resources/big_icons/16/15164.png);
+  position: relative;
+  z-index: -1;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.box {
+  border: 2px solid grey;
+  width: 400px;
+  margin: auto;
+  margin-top: 50px;
+}
+.tabs {
+  display: flex;
+  justify-content: space-between;
+}
+.tab {
+  background: #ccc;
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid grey;
+  border-top: none;
+  cursor: pointer;
+  position: relative;
+}
+.active-tab {
+}
+.active-tab::after {
+  border-top: 2px solid red;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background: initial;
+  animation: new 0.5s;
+}
+@keyframes new {
+  from {
+    top: 50px;
+    left: 0;
+    right: 0;
+    background: grey;
+  }
+  to {
+    top: 0px;
+    left: 0;
+    right: 0;
+    border-top: 2px solid grey;
+  }
+}
+.contents {
+  background: grey;
+  position: relative;
+}
+.content {
+  display: none;
+  position: relative;
+}
+.active-content {
+  display: block;
+  margin-left: 10px;
+  margin-right: 10px;
+  transition: all 1s ease-in-out;
+  animation: example 0.3s;
+}
